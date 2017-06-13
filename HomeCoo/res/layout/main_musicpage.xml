@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content_base"
+    android:orientation="vertical" >
+    
+     <include android:id="@+id/lv_item_header"
+             layout="@layout/item_header"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:weightSum="3"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal">
+    
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_weight="1">
+
+		    <TextView
+		        android:id="@+id/btn_allSongs"
+		        android:padding="5dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:layout_marginTop="15dp"
+		        android:text="歌曲列表"
+		        android:textSize="25sp" />
+
+		    <ListView
+		        android:id="@+id/listview"
+		        android:layout_width="fill_parent"
+	 		    android:layout_height="match_parent"  
+	 		    android:layout_marginLeft="15dp"
+	 		    android:layout_marginTop="10dp"
+	 		    android:layout_marginRight="10dp"
+	 		    android:layout_marginBottom="10dp"
+	 		    android:layout_gravity="center_horizontal">
+		    </ListView>
+	</LinearLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="2"
+	    android:padding="10dp"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="30dp"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginRight="30dp"
+	        android:layout_marginBottom="30dp"
+	        android:background="@drawable/topname"/>
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="10dp"
+	         android:layout_marginTop="10dp"
+	        android:orientation="horizontal" >
+
+	        <TextView
+	            android:id="@+id/tv_curcentTime"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:layout_weight="1.7"
+	            android:gravity="center"
+	            android:text="00:00" />
+
+	        <SeekBar
+	            android:id="@+id/seekBar1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"  />
+
+	        <TextView
+	            android:id="@+id/tv_allTime"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:layout_weight="1.7"
+	            android:gravity="center"
+	            android:text="00:00" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:id="@+id/rl_control"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:orientation="horizontal" >
+	        <ImageButton
+	            android:id="@+id/PauseImageButton1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:layout_centerHorizontal="true"
+	            android:background="@drawable/pause001" />
+	        <ImageButton
+	            android:id="@+id/LastImageButton"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:layout_centerHorizontal="true"
+	            android:layout_toRightOf="@id/PauseImageButton1"
+	            android:background="@drawable/former" />
+	        <ImageButton
+	            android:id="@+id/NextImageButton"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:layout_centerHorizontal="true"
+	            android:layout_toLeftOf="@id/PauseImageButton1"
+	            android:background="@drawable/next" />
+	   	 </RelativeLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<include android:id="@+id/lv_item_bottom"
+             layout="@layout/item_bottom"/>
+</LinearLayout>

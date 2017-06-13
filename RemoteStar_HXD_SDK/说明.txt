@@ -1,0 +1,23 @@
+2016.02.21
+修复library project中switch case
+
+2016.03.31
+【ActivityMain】
+ 1、退出直接返回HomeActivity
+ 
+【FragmentGroup】
+ 1、发送当前红外转发器的devid给SocketService
+ 
+ 【FragmentAIR】
+ 1、提取红外码并发到SocketService
+ 
+ 【FragmentDevice】
+ 1、屏蔽弹出对话框广告
+ 
+ 2016.05.03
+【HomeActivity】
+ editor.putString("OPERATION_TYPE","SCENE_INFRA_SEND"); //主界面进入，操作类型为直接发送红外码
+ 
+【SceneSetActivity】
+ editor.putString("OPERATION_TYPE","SCENE_INFRA_SET"); //情景设置页面进入，操作类型为红外码设置
+ 

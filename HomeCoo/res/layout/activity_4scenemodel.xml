@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/lv_item_header"
+        layout="@layout/item_header" />
+
+    <RadioGroup
+        android:id="@+id/rg_sceneQuick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@drawable/bg_content_base"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/content_padding" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <RadioButton
+                android:id="@+id/tv_scene_quick1"
+                style="@style/scene_default"
+                android:background="@drawable/bg_scene" />
+
+            <RadioButton
+                android:id="@+id/tv_scene_quick2"
+                style="@style/scene_default"
+                android:background="@drawable/bg_scene" 
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <ImageButton
+                android:id="@+id/btn_scenequick_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/scene_add"
+                android:gravity="center"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <RadioButton
+                android:id="@+id/tv_scene_quick3"
+                style="@style/scene_default"
+                android:background="@drawable/bg_scene" />
+
+            <RadioButton
+                android:id="@+id/tv_scene_quick4"
+                style="@style/scene_default"
+                android:background="@drawable/bg_scene"
+                android:layout_marginLeft="30dp" />
+        </LinearLayout>
+     </RadioGroup>
+        <include
+            android:id="@+id/lv_item_bottom"
+            layout="@layout/item_bottom" />
+</LinearLayout>
